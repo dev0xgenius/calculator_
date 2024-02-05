@@ -1,25 +1,106 @@
-%flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 main {
+  @extend %flex;
+  flex-direction: column;
+  gap: 20px;
+
+  max-width: max-content;
+  width: 100%;
+  padding: 30px;
+  // border: 1px solid orangered;
+
   header {
     @extend %flex;
-    align-items: baseline;
-    border: 2px solid red;
+    width: 100%;
+    justify-content: space-between;
+    h1 { font-size: 1.5em; }
 
     .themeSelect {
       @extend %flex;
       gap: 20px;
+      align-items: flex-end;
 
-      .theme-options { @extend %flex; }
+      .theme-options {
+        @extend %flex; gap: 4px;
+        padding: 4px;
+        border-radius: 20px;
+        background-color: black;
+
+        span:first-child input[type='button']{
+          background-color: whitesmoke;
+        }
+      }
+
       .theme-option {
         @extend %flex;
+        position: relative;
+        width: max-content;
         flex-direction: column;
-        border: 1px solid black;
+
+        label {
+          position: absolute;
+          // background-color: white;
+          top: -200%;
+        }
+
+        input[type='button'] {
+          width: 12px;
+          height: 12px;
+          border: none;
+          border-radius: 50%;
+          background-color: transparent;
+        }
       }
     }
+  }
+
+  #output {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: right;
+    border-radius: 8px;
+    border: 2px solid grey;
+  }
+
+  .buttons {
+    @extend %flex;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    flex-direction: column;
+    background-color: gray;
+
+    .chars {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4,1fr);
+      gap: 2px;
+    }
+
+    .action {
+      @extend %flex;
+      width: 100%;
+      justify-content: space-between;
+
+      button {flex: 1; gap: 8px;}
+    }
+  }
+}
+
+button {
+  padding: 10px;
+  margin: 4px;
+  font-weight: bold;
+  font-size: 1.5em;
+  border-radius: 4px;
+  border: none;
+  background-color: whitesmoke;
+
+  &:active {
+    color: whitesmoke;
+    background-color: black;
   }
 }
