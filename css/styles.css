@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+main header .themeSelect .theme-option, main header .themeSelect .theme-options, main header .themeSelect, main header, body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,6 +14,24 @@ body {
 
 body {
   min-height: 100vh;
+}
+
+main header .themeSelect .theme-option, main header .themeSelect .theme-options, main header .themeSelect, main header, body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main header {
+  align-items: baseline;
+  border: 2px solid red;
+}
+main header .themeSelect {
+  gap: 20px;
+}
+main header .themeSelect .theme-option {
+  flex-direction: column;
+  border: 1px solid black;
 }
 
 /*# sourceMappingURL=styles.css.map */

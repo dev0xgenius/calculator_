@@ -1,3 +1,19 @@
+main header .themeSelect .theme-option, main header .themeSelect .theme-options, main header .themeSelect, main header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+main header {
+  align-items: baseline;
+  border: 2px solid red;
+}
+main header .themeSelect {
+  gap: 20px;
+}
+main header .themeSelect .theme-option {
+  flex-direction: column;
+  border: 1px solid black;
+}
 
 /*# sourceMappingURL=theme-1.css.map */

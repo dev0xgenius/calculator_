@@ -1,0 +1,25 @@
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  header {
+    @extend %flex;
+    align-items: baseline;
+    border: 2px solid red;
+
+    .themeSelect {
+      @extend %flex;
+      gap: 20px;
+
+      .theme-options { @extend %flex; }
+      .theme-option {
+        @extend %flex;
+        flex-direction: column;
+        border: 1px solid black;
+      }
+    }
+  }
+}
