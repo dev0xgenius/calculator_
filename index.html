@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,16 +26,18 @@
   <main>
     <header>
       <h1>Calc</h1>
-      <div class="theme">
+      <div class="themeSelect">
         <span>Theme</span>
-        <span>
-          <label for="theme1">1</label>
-          <input type="radio" name="theme" id="theme1"></span>
-        <span><label for="theme2">2</label>
-          <input type="radio" name="theme" id="theme2">
-        </span><span>
-          <label for="theme3">3</label>
-          <input type="radio" name="theme" id="theme3"></span>
+        <div class="theme-options">
+          <span class="theme-option">
+            <label for="theme1">1</label>
+            <input type="radio" name="theme" id="theme1"></span>
+          <span class="theme-option"><label for="theme2">2</label>
+            <input type="radio" name="theme" id="theme2">
+          </span><span class="theme-option">
+            <label for="theme3">3</label>
+            <input type="radio" name="theme" id="theme3"></span>
+        </div>
       </div>
     </header>
     <output id="output">100 + 10</output>
