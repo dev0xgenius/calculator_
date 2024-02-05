@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-main .buttons .action, main .buttons, main header .themeSelect .theme-option, main header .themeSelect .theme-options, main header .themeSelect, main header, main, body {
+main .buttons, main header .themeSelect .theme-option, main header .themeSelect .theme-options, main header .themeSelect, main header, main, body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +22,7 @@ main {
   gap: 20px;
   max-width: max-content;
   width: 100%;
-  padding: 30px;
+  padding: 15px;
 }
 main header {
   width: 100%;
@@ -69,6 +69,7 @@ main #output {
   text-align: right;
   border-radius: 8px;
   border: 2px solid grey;
+  overflow: auto;
 }
 main .buttons {
   width: 100%;
@@ -86,19 +87,19 @@ main .buttons .chars {
 }
 main .buttons .action {
   width: 100%;
-  justify-content: space-between;
-}
-main .buttons .action button {
-  flex: 1;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 2px;
 }
 
 button {
   padding: 10px;
   margin: 4px;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.8em;
   border-radius: 4px;
+  outline: none;
   border: none;
   background-color: whitesmoke;
 }

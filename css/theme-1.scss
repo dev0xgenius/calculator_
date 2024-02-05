@@ -5,8 +5,7 @@ main {
 
   max-width: max-content;
   width: 100%;
-  padding: 30px;
-  // border: 1px solid orangered;
+  padding: 15px;
 
   header {
     @extend %flex;
@@ -62,6 +61,7 @@ main {
     text-align: right;
     border-radius: 8px;
     border: 2px solid grey;
+    overflow: auto;
   }
 
   .buttons {
@@ -76,16 +76,16 @@ main {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4,1fr);
+      grid-template-rows: repeat(4, 1fr);
       gap: 2px;
     }
 
     .action {
-      @extend %flex;
       width: 100%;
-      justify-content: space-between;
-
-      button {flex: 1; gap: 8px;}
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: repeat(1, 1fr);
+      gap: 2px;
     }
   }
 }
@@ -94,8 +94,9 @@ button {
   padding: 10px;
   margin: 4px;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.8em;
   border-radius: 4px;
+  outline: none;
   border: none;
   background-color: whitesmoke;
 
