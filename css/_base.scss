@@ -17,3 +17,111 @@ body {
   @extend %flex;
   padding: 10px;
 }
+
+main {
+  @extend %flex;
+  flex-direction: column;
+  gap: 20px;
+
+  max-width: max-content;
+  width: 100%;
+  padding: 15px;
+
+  header {
+    @extend %flex;
+    width: 100%;
+    justify-content: space-between;
+    h1 { font-size: 1.5em; }
+
+    .themeSelect {
+      @extend %flex;
+      gap: 20px;
+      align-items: flex-end;
+
+      .theme-options {
+        @extend %flex; gap: 4px;
+        padding: 4px;
+        border-radius: 20px;
+        background-color: black;
+
+        span:first-child input[type='button']{
+          background-color: whitesmoke;
+        }
+      }
+
+      .theme-option {
+        @extend %flex;
+        position: relative;
+        width: max-content;
+        flex-direction: column;
+
+        label {
+          position: absolute;
+          // background-color: white;
+          top: -200%;
+        }
+
+        input[type='button'] {
+          width: 12px;
+          height: 12px;
+          border: none;
+          border-radius: 50%;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  #output {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: right;
+    border-radius: 8px;
+    border: 2px solid grey;
+    overflow: auto;
+  }
+
+  .buttons {
+    @extend %flex;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    flex-direction: column;
+    background-color: gray;
+
+    .chars {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 2px;
+    }
+
+    .action {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: repeat(1, 1fr);
+      gap: 2px;
+    }
+  }
+}
+
+button {
+  padding: 10px;
+  margin: 4px;
+  font-weight: bold;
+  font-size: 1.8em;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+
+  &:active {
+    color: whitesmoke;
+    background-color: black;
+  }
+}

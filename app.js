@@ -13,9 +13,7 @@ function handleClick(event) {
   let btn = event.target;
   let btnVal = btn.innerText.toLowerCase();
 
-  if (btnVal) {
-    updateCalc(inputType(btnVal));
-  }
+  if (btnVal) updateCalc(inputType(btnVal));
 }
 
 function updateCalc(userInput) {
@@ -35,13 +33,37 @@ function updateCalc(userInput) {
 }
 
 function updateDisplay(input) {
-  if (display.innerText == '0') display.innerText = input;
-  else display.innerText += input;
+  if (display.innerText == '0' ||
+      display.innerText == 'Infinity') { 
+        display.innerText = input;
+  } else display.innerText += input;
 }
 
 function validInput(input) {
   let displayData = display.innerText;
   let prevInput = displayData[displayData.length - 1];
+
+  if (inputType(prevInput)['type'] == 'operator' &&
+      inputType(input)['type'] == 'operator') return false;
+  else if (displayData == '0') return false;
+  
+  return true;
+}
+
+function handleAction(action) {
+  let displayData = display.innerText;
+  switch (action) {
+    case 'del':
+      display.innerText = displayData.slice(0, displayData.length - 1);
+      break;
+    case 'reset':
+      display.innerText = 0;
+      break;
+    case '=':
+      try { display.innerText = eval(display.innerText); }
+      catch(err) { alert(err); }
+      break;
+  }
 }
 
 function inputType(input) {

@@ -1,18 +1,3 @@
-/* Error: The target selector was not found.
- * Use "@extend %flex !optional" to avoid this error.
- *   ,
- * 2 |   @extend %flex;
- *   |   ^^^^^^^^^^^^^
- *   '
- *   css\theme-1.scss 2:3  root stylesheet */
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: The target selector was not found.\aUse "@extend %flex !optional" to avoid this error.\a   \2577 \a 2 \2502    @extend %flex;\d\a   \2502    ^^^^^^^^^^^^^\a   \2575 \a   css\\theme-1.scss 2:3  root stylesheet';
-}
+
+/*# sourceMappingURL=theme-1.css.map */
