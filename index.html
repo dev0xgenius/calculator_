@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+  <link rel='stylesheet' type="text/css" href="./css/style.css" />
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      display: none;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Calc</h1>
+      <div class="theme">
+        <span>Theme</span>
+        <span>
+          <label for="theme1">1</label>
+          <input type="radio" name="theme" id="theme1"></span>
+        <span><label for="theme2">2</label>
+          <input type="radio" name="theme" id="theme2">
+        </span><span>
+          <label for="theme3">3</label>
+          <input type="radio" name="theme" id="theme3"></span>
+      </div>
+    </header>
+    <output id="output">100 + 10</output>
+    <div class="buttons">
+      <div class="btn">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button id="delete">Del</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>+</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button>
+        <button>.</button>
+        <button>0</button>
+        <button>/</button>
+        <button>x</button>
+      </div>
+      <div class="action">
+        <button id="reset btn">Reset</button>
+        <button id="calculate btn">=</button>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+
+</html>
