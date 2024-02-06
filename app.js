@@ -54,7 +54,9 @@ function handleAction(action) {
   let displayData = display.innerText;
   switch (action) {
     case 'del':
-      display.innerText = displayData.slice(0, displayData.length - 1);
+      display.innerText = 
+      displayData.slice(0, displayData.length - 1);
+      if (displayData.length < 2) display.innerText = '0';
       break;
     case 'reset':
       display.innerText = 0;

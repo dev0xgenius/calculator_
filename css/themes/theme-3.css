@@ -1,0 +1,19 @@
+:root {
+  /*Background */
+  --main-background: hsl(268, 75%, 9%);
+  --toggle-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+
+  /* Keys */
+  --key-background: hsl(281, 89%, 26%);
+  --key-shadow: hsl(285, 91%, 52%);
+  --key-bg-toggle: hsl(176, 100%, 44%); /* "bg" stands for background */
+  --key-shadow-r-btn: hsl(177, 92%, 70%); /* 'r' means reset */
+  --key-bg-main: hsl(268, 47%, 21%);
+  --key-shadow-main: hsl(290, 70%, 36%);
+
+  /* Text */
+  --text-color: hsl(52, 100%, 62%);
+  --text-color-2: hsl(0, 0%, 100%);
+  --text-color-3: hsl(198, 20%, 13%);
+}

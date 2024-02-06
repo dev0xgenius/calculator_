@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
 }
 
 %flex {
@@ -16,6 +17,7 @@ body {
   min-height: 100vh;
   @extend %flex;
   padding: 30px;
+  background-color: var(--main-background);
 }
 
 main {
@@ -23,30 +25,34 @@ main {
   flex-direction: column;
   gap: 20px;
 
-  max-width: 600px;
+  max-width: 400px;
   width: 100%;
-  // border: 1px solid pink;
 
   header {
     @extend %flex;
     width: 100%;
     justify-content: space-between;
-    h1 { font-size: 1.5em; }
+    padding: 2px;
+    color: var(--text-color);
 
-    .themeSelect {
+    h1 {
+      font-size: 1.5em;
+      // color: var(--text-color-2);
+    }
+
+    .themeSelect { // Toggle
       @extend %flex;
+      font-size: .8em;
+      font-weight: bold;
       gap: 20px;
       align-items: flex-end;
+      // color: var(--text-color-2);
 
       .theme-options {
         @extend %flex; gap: 4px;
         padding: 4px;
         border-radius: 20px;
-        background-color: black;
-
-        span:first-child input[type='button']{
-          background-color: whitesmoke;
-        }
+        background-color: var(--toggle-background);
       }
 
       .theme-option {
@@ -57,16 +63,21 @@ main {
 
         label {
           position: absolute;
-          // background-color: white;
-          top: -200%;
+          font-size: 1em;
+          top: -150%;
         }
 
         input[type='button'] {
-          width: 12px;
-          height: 12px;
+          width: 15px;
+          height: 15px;
           border: none;
+          outline: none;
           border-radius: 50%;
           background-color: transparent;
+        }
+
+        input[name='theme'].active {
+          background-color: var(--key-bg-toggle);
         }
       }
     }
@@ -77,27 +88,29 @@ main {
     width: 100%;
     padding: 15px;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: right;
-    border-radius: 8px;
-    border: 2px solid grey;
+    border-radius: 10px;
+    color: var(--text-color);
+    background: var(--screen-background);
     overflow: auto;
   }
 
   .buttons {
     @extend %flex;
     width: 100%;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
     flex-direction: column;
-    background-color: gray;
+    background-color: var(--toggle-background);
 
     .chars {
       width: 100%;
       display: grid;
+      justify-content: baseline;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 1fr);
-      gap: 10px;
+      gap: 14px;
     }
 
     .action {
@@ -105,26 +118,25 @@ main {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(1, 1fr);
-      margin: 10px;
+      margin: 14px;
       margin-bottom: 0;
-      gap: 10px;
+      gap: 14px;
     }
   }
 }
 
 button {
-  padding: 15px;
-  // margin: 4px;
   font-weight: bold;
-  font-size: 1.8em;
-  border-radius: 4px;
+  font-size: 2em;
+  border-radius: 5px;
   outline: none;
   border: none;
-  background-color: whitesmoke;
+  color: var(--text-color);
+  box-shadow: 0px 4px var(--key-shadow-main);
+  background-color: var(--key-bg-main);
 
-  &:active {
-    color: whitesmoke;
-    background-color: black;
+  &:hover {
+    background-color: var(--text-color-2);
   }
 }
 
@@ -132,4 +144,17 @@ button {
 .btn{
   padding: 15px 10px;
   font-size: 1em;
+  color: var(--text-color-2);
+  box-shadow: 0px 4px var(--key-shadow); 
+  background-color: var(--key-background);
+
+  &:hover {
+    opacity: .8;
+    background-color: var(--key-background);
+  }
+}
+
+.calculate.btn {
+  box-shadow: 0px 4px var(--key-shadow-r-btn);
+  background-color: var(--key-bg-toggle);
 }
