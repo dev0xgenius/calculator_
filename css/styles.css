@@ -14,15 +14,14 @@ main .buttons, main header .themeSelect .theme-option, main header .themeSelect 
 
 body {
   min-height: 100vh;
-  padding: 10px;
+  padding: 30px;
 }
 
 main {
   flex-direction: column;
   gap: 20px;
-  max-width: max-content;
+  max-width: 600px;
   width: 100%;
-  padding: 15px;
 }
 main header {
   width: 100%;
@@ -63,7 +62,7 @@ main header .themeSelect .theme-option input[type=button] {
 main #output {
   display: block;
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   font-weight: bold;
   font-size: 2em;
   text-align: right;
@@ -73,7 +72,7 @@ main #output {
 }
 main .buttons {
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   border-radius: 8px;
   flex-direction: column;
   background-color: gray;
@@ -83,19 +82,20 @@ main .buttons .chars {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 2px;
+  gap: 10px;
 }
 main .buttons .action {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  gap: 2px;
+  margin: 10px;
+  margin-bottom: 0;
+  gap: 10px;
 }
 
 button {
-  padding: 10px;
-  margin: 4px;
+  padding: 15px;
   font-weight: bold;
   font-size: 1.8em;
   border-radius: 4px;
@@ -106,6 +106,18 @@ button {
 button:active {
   color: whitesmoke;
   background-color: black;
+}
+
+.btn {
+  padding: 15px 10px;
+  font-size: 1em;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: lightgrey;
+    background-color: purple;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
