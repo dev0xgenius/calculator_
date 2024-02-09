@@ -22,7 +22,7 @@ body {
 main {
   flex-direction: column;
   gap: 20px;
-  max-width: max-content;
+  max-width: 600px;
   width: 100%;
 }
 main header {
@@ -107,7 +107,7 @@ main .buttons .action {
 button {
   font-weight: bold;
   font-size: 2em;
-  border-radius: 5px;
+  border-radius: 10px;
   outline: none;
   border: none;
   color: var(--text-color);
