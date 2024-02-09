@@ -22,7 +22,7 @@ body {
 main {
   flex-direction: column;
   gap: 20px;
-  max-width: max-content;
+  max-width: 500px;
   width: 100%;
 }
 main header {
