@@ -35,4 +35,7 @@ function toggleTheme(btn) {
 function setDefaultTheme() {
   header.style.color = "var(--text-color-2)";
   output.style.color = "var(--text-color-2)";
+  
+  document.querySelector('.calculate.btn')
+    .style.color = "var(--text-color-2)";
 }
