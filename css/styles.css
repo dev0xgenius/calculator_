@@ -22,7 +22,7 @@ body {
 main {
   flex-direction: column;
   gap: 20px;
-  max-width: max-content;
+  max-width: 768px;
   width: 100%;
 }
 main header {
@@ -91,7 +91,7 @@ main .buttons .chars {
   height: auto;
   display: grid;
   justify-content: baseline;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 20px;
 }
