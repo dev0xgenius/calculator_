@@ -91,7 +91,7 @@ main .buttons .chars {
   height: auto;
   display: grid;
   justify-content: baseline;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 1fr);
   gap: 20px;
 }
