@@ -89,7 +89,7 @@ main .buttons {
 main .buttons .chars {
   width: 100%;
   height: auto;
-	padding: 20px;
+padding: 0px;
   display: grid;
   justify-content: baseline;
   grid-template-columns: repeat(4, 1fr);
