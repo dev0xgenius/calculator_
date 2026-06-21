@@ -50,6 +50,14 @@ function validInput(input) {
   return true;
 }
 
+function safeEval(expression) {
+  const sanitized = expression.replace(/x/g, '*');
+  if (!/^[\d+\-*/.%()]+$/.test(sanitized)) {
+    throw new Error('Invalid characters');
+  }
+  return Function('"use strict"; return (' + sanitized + ')')();
+}
+
 function handleAction(action) {
   let displayData = display.innerText;
   switch (action) {
@@ -62,17 +70,13 @@ function handleAction(action) {
       display.innerText = 0;
       break;
     case '=':
-      try { display.innerText = eval(display.innerText); }
-      catch(err) { alert(err); }
+      try { display.innerText = safeEval(display.innerText); }
+      catch(err) { display.innerText = 'Error'; }
       break;
   }
 }
 
 function inputType(input) {
-  // This function does not get the actual input type
-  // of an HTML element, instead it checks if an input
-  // belongs to any type listed in the 'btnTypes' Object
-  // and then returns an object containing the input and it's type.
   for (let type of Object.keys(btnTypes)) {
     let typeList = btnTypes[type];
     if (typeList.includes(input))
